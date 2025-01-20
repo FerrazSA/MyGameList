@@ -1,7 +1,6 @@
 package com.centsa.mygamelist.controllers;
 
 import com.centsa.mygamelist.dto.GameMinDTO;
-import com.centsa.mygamelist.entities.Game;
 import com.centsa.mygamelist.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +18,6 @@ public class GameController {
 
     @GetMapping
     public List<GameMinDTO> findAll() {
-        List<GameMinDTO> result = gameService.findAll();
-        return result;
+        return gameService.findAll();
     }
 }
